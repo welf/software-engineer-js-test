@@ -2,37 +2,87 @@ body {
   font-family: Helvetica, Verdana, sans-serif;
   line-height: 1.5em;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+h3 {
+  text-align: center;
+}
+
+button {
+  margin-right: 1em;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.scale-buttons {
+  margin-top: 2em;
+  display: flex;
+  align-items: center
+}
+
+.columns {
+  padding: 0;
+  // flex is better than floats
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 #imageContainer,
 #debugContainer {
-  padding: 1em;
   box-sizing: border-box;
 }
 
+#debugContainer {
+  padding: 1em;
+}
+
 .column {
-  width: 48%;
   margin: .5%;
   border: 1px solid #000;
   vertical-align: top;
 
   &.left {
-    float: left;
+    width: 58%;
+    padding: 1em;
   }
   &.right {
-    float: right;
+    width: 40%;
   }
 }
 
 #imageContainer {
+  padding: 0;
+  overflow: hidden;
+
   img {
     width: 100%;
+    position: relative;
+  }
+
+  img:hover {
+    cursor: pointer;
   }
 }
 
 #debugContainer {
   p {
     margin: 0;
-    padding: 0;
+    padding: 0 0.5em;
   }
 }
