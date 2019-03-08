@@ -1,3 +1,15 @@
+# Functional reactive solution
+
+I've made a solution based on RxJS event streams. The main part of the code (the logic) is concise, readable and highly declarative. Such code is extremely easy to maintain and to refactor.
+
+Everything is a stream. You can imagine streams as arrays with values ordered by time. Button clicks are streams, file uploads and reads are streams, log messages are stream etc. With streams you work asynchronously with sychronous and asyncrounous data. You transform values passing them from one stream to another in highly declarative manner.
+
+Helper functions are moved to the folder `helpers`.
+
+The part of the test is ambigitious. What you mean under _"user can hit the import button and load a previously saved description"_? Should the user hit 'Save' button to store the description? Should it be saved in local storage and readed from it?
+
+### ORIGINAL TEXT IS BELOW
+
 # Albumprinter test
 
 This repository contains a basic setup for a JavaScript project. You
@@ -11,7 +23,7 @@ rundown of the structure.
 You will be working in an company where our customers will purchase a
 printed product. As such your expertise should not be restricted to
 developing applications, but also extend to understand the requirements
-of print and how to translate between the app and the print world and 
+of print and how to translate between the app and the print world and
 vice versa.
 
 ### Goal
@@ -20,16 +32,16 @@ You should write a very simple application where there are two scenarios:
 
 ##### Scenario 1.
 
-* The user can select a photo file from his/her device and import it into the application
-* The user can position and scale this photo on a canvas (note: photo must always cover full canvas size)
-* Hit a submit button which will generate the print description as described below
- (these instructions can be displayed on screen in a text area).
+- The user can select a photo file from his/her device and import it into the application
+- The user can position and scale this photo on a canvas (note: photo must always cover full canvas size)
+- Hit a submit button which will generate the print description as described below
+  (these instructions can be displayed on screen in a text area).
 
 ##### Scenario 2.
 
-* The user can hit an import button which loads a previously saved description
-* Upon loading, the application should show a canvas that contains the photo
-* Photo is scaled and positioned as expected according to the loaded print instructions
+- The user can hit an import button which loads a previously saved description
+- Upon loading, the application should show a canvas that contains the photo
+- Photo is scaled and positioned as expected according to the loaded print instructions
 
 #### Deliverables
 
@@ -47,7 +59,7 @@ If you need to add buttons to “_move photo left_”, "_move photo right_" or
 _design of your code_, NOT the design of the application interface!
 
 It is more important to show how you write (in your eyes) a maintainable
-application. It is *not important* to finish all deliverables described
+application. It is _not important_ to finish all deliverables described
 above, as long as you can show how you would approach reaching that
 state. As such you can use _pseudo code_ where desirable. Be prepared to
 explain the steps you took in a review of this test.
@@ -95,7 +107,7 @@ be sure to write your own logic for the part that is "Albelli unique" code.
 You can use a framework, but we are more interested in seeing how you
 would structure things if you didn't have a framework that defines the
 design pattern for you.
- 
+
 Your application should run on the latest public version of Google Chrome.
 You don't have to worry about making your code work on any other browser, as
 such you are free to use anything that is supported by Chrome and not worry
@@ -125,22 +137,22 @@ In the root of this repository, you can resolve all these dependencies via
 the command line using:
 
     npm install
-    
+
 You can now start developing the application using Gulp (build system/task
 runner). by typing:
 
     gulp dev
-    
+
 The following will happen:
 
- * All JavaScript is included and built for the browser
- * All SASS styles are converted into CSS
- * Your browser will open and run the application
- * File watchers are started:
-   If you add/remove/change HTML, SCSS or JS files the
-   appropriate rebuild tasks are automatically run and your browser will
-   be refreshed automatically. This allows you to instantly view the
-   results of your changes.
+- All JavaScript is included and built for the browser
+- All SASS styles are converted into CSS
+- Your browser will open and run the application
+- File watchers are started:
+  If you add/remove/change HTML, SCSS or JS files the
+  appropriate rebuild tasks are automatically run and your browser will
+  be refreshed automatically. This allows you to instantly view the
+  results of your changes.
 
 You can add / remove / change files to in the source folder and your
 browser will automatically update to reflect the changes.
